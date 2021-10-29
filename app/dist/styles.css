@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Work+Sans:wght@100;200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+.tooltip {
+  position: relative;
+  text-decoration: underline;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  text-indent: 0;
+  width: 260px;
+  background-color: #333;
+  background-color: #c39248;
+  background-color: #c39248;
+  color: #fff;
+  padding: 1em;
+  border-radius: 6px;
+  position: absolute;
+  top: 20px;
+  left: -100px;
+  z-index: 1;
+}
+
+.tooltip .tooltiptext img {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 775px) {
+  .tooltip .tooltiptext {
+    width: 160px;
+    font-size: 0.8rem;
+    left: -70px;
+  }
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.heart {
+  opacity: 0.6;
+  display: inline-block;
+  background-color: lightpink;
+  height: 10px;
+  width: 10px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-animation-name: beat;
+          animation-name: beat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  position: relative;
+  bottom: 10px;
+  left: -3px;
+}
+
+.heart:after {
+  background-color: lightpink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0px;
+  left: 5px;
+}
+
+.heart:before {
+  background-color: lightpink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -5px;
+  left: 0px;
+}
+
+@-webkit-keyframes beat {
+  0% {
+    -webkit-transform: scale(1) rotate(-45deg);
+            transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: scale(0.6) rotate(-45deg);
+            transform: scale(0.6) rotate(-45deg);
+  }
+}
+
+@keyframes beat {
+  0% {
+    -webkit-transform: scale(1) rotate(-45deg);
+            transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: scale(0.6) rotate(-45deg);
+            transform: scale(0.6) rotate(-45deg);
+  }
+}
+
+#main {
+  background: linear-gradient(135deg, #79b381, #497e52);
+  margin: 2em 0.5em;
+  border-radius: 0.5em;
+  letter-spacing: 1px;
+}
+
+#main header {
+  color: #f8f8f8;
+  padding: 2em;
+  text-align: center;
+  text-shadow: 1px 1px 3px black;
+}
+
+#main header #title {
+  font-size: 3.5rem;
+  text-transform: capitalize;
+}
+
+#main header p {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  bottom: 8px;
+}
+
+#main main {
+  padding: 3em;
+}
+
+@media (max-width: 700px) {
+  #main main {
+    padding: 1em;
+  }
+}
+
+#main main #img-div {
+  color: #f1f1f1;
+  padding-bottom: 0.6em;
+  border-radius: 50%;
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 100px #74ae7c;
+          box-shadow: 0px 0px 100px #74ae7c;
+}
+
+@media (max-width: 850px) {
+  #main main #img-div {
+    width: 70%;
+  }
+}
+
+#main main #img-div #image {
+  display: block;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#main main #img-div #img-caption {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.5em;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 1px black;
+}
+
+@media (max-width: 1200px) {
+  #main main #img-div #img-caption {
+    font-size: 0.7rem;
+    margin-top: 0.2em;
+  }
+}
+
+@media (max-width: 850px) {
+  #main main #img-div #img-caption {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #main main #img-div #img-caption {
+    font-size: 0.45rem;
+  }
+}
+
+#main main #tribute-info {
+  width: 70%;
+  margin: 4em auto;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+@media (max-width: 850px) {
+  #main main #tribute-info {
+    width: 80%;
+  }
+}
+
+#main main #tribute-info p {
+  text-indent: 45px;
+  margin: 1em;
+  text-shadow: 1px 1px 1px black;
+}
+
+#main main #tribute-info p.quote {
+  width: 80%;
+  margin: 4em auto;
+  text-shadow: 0px 0px 100px white;
+}
+
+#main footer {
+  text-align: center;
+}
+
+#main footer p {
+  color: #fff;
+  padding: 0 1em 2em;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#main footer p a {
+  color: #fff;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+
+#main footer a:hover {
+  opacity: 0.8;
+}
+/*# sourceMappingURL=styles.css.map */
