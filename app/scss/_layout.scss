@@ -1,7 +1,4 @@
 #main{
-    // background: linear-gradient(315deg, rgb(75,128,86), rgb(116,174,124) );
-    // background: linear-gradient(45deg, rgb(114,172,122),rgb(75,128,86), rgb(116,174,124) );
-    // background: linear-gradient(135deg, rgb(121,179,129),rgb(75,128,86) );
     background: linear-gradient(135deg, rgb(121,179,129),rgb(73,126,82) );
     margin: 2em 0.5em;
     border-radius: 0.5em;
@@ -16,6 +13,10 @@
         #title{
             font-size: 3.5rem;
             text-transform: capitalize;
+
+            @media (max-width:500px){
+               font-size: 2.6em;
+            }
         }
 
         p{
@@ -42,8 +43,18 @@
             margin: 0 auto;
             overflow: hidden;
             box-shadow: 0px 0px 100px rgb(116,174,124);
-            //box-shadow: 0px 0px 100px white;
 
+            &:hover{
+                #image{
+                    transform: scale(1.2);
+                }
+
+                #img-caption{
+                    transform: scale(2) translateY(-2rem);
+                    font-weight: 500;
+                }
+            }
+    
             @media (max-width:850px){
                 width: 70%;
             }
@@ -52,6 +63,8 @@
                 display: block;
                 max-width: 100%;
                 object-fit: cover;
+                opacity: 0.8;
+                transition: all 500ms ease-in-out;
             }
 
             #img-caption{
@@ -61,18 +74,20 @@
                 margin-top: 0.5em;
                 text-transform: capitalize;
                 text-shadow: $text-shadow-light;
+                transition: all 500ms ease-in-out;
+
 
                 @media (max-width:1200px){
-                    font-size: 0.7rem;
+                    font-size: 0.75rem;
                     margin-top: 0.2em;
                 }
 
                 @media (max-width:850px){
-                    font-size: 0.6rem;
+                    font-size: 0.67rem;
                 }
 
                 @media (max-width:600px){
-                    font-size: 0.45rem;
+                    font-size: 0.60rem;
                 }
             }
         }
@@ -89,17 +104,21 @@
             
             p{
                 text-indent: 45px;
-                //text-align: justify;
                 margin:1em;
                 text-shadow: $text-shadow-light;
 
                 &.quote{
-                    //padding: 1em;
-                    //border-radius: 1em;
-                    width:80%;
+                    width:50%;
                     margin: 4em auto;
-                    //background: rgb(121,179,129);
                     text-shadow: 0px 0px 100px white;
+
+                    @media (max-width:1200px){
+                        width: 60%;
+                    }
+
+                    @media (max-width:600px){
+                        width: 70%;
+                    }
                 
                 }
             }
@@ -115,6 +134,18 @@
             font-family: "Lato", sans-serif;
             font-weight: 700;
             letter-spacing: 2px;
+
+            @media (max-width:850px){
+                font-size: 0.9rem;
+            }
+
+            .tooltiptext{
+                display: inline-block;
+                //background: red;
+                background: url("http://emmafansite.com");
+                top: -420px;
+                left: -600px;
+            }
 
             a{
                 color: $white;

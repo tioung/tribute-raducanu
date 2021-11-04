@@ -22,16 +22,22 @@ html {
   visibility: hidden;
   text-indent: 0;
   width: 260px;
-  background-color: #333;
-  background-color: #c39248;
   background-color: #c39248;
   color: #fff;
   padding: 1em;
   border-radius: 6px;
+  -webkit-box-shadow: 0px 0px 5px #c39248;
+          box-shadow: 0px 0px 5px #c39248;
   position: absolute;
   top: 20px;
   left: -100px;
   z-index: 1;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  -webkit-transition: -webkit-transform 100ms ease-in-out;
+  transition: -webkit-transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
 }
 
 .tooltip .tooltiptext img {
@@ -50,6 +56,8 @@ html {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .heart {
@@ -134,6 +142,12 @@ html {
   text-transform: capitalize;
 }
 
+@media (max-width: 500px) {
+  #main header #title {
+    font-size: 2.6em;
+  }
+}
+
 #main header p {
   display: inline-block;
   font-size: 0.8rem;
@@ -163,6 +177,17 @@ html {
           box-shadow: 0px 0px 100px #74ae7c;
 }
 
+#main main #img-div:hover #image {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#main main #img-div:hover #img-caption {
+  -webkit-transform: scale(2) translateY(-2rem);
+          transform: scale(2) translateY(-2rem);
+  font-weight: 500;
+}
+
 @media (max-width: 850px) {
   #main main #img-div {
     width: 70%;
@@ -174,6 +199,9 @@ html {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0.8;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 #main main #img-div #img-caption {
@@ -183,24 +211,26 @@ html {
   margin-top: 0.5em;
   text-transform: capitalize;
   text-shadow: 1px 1px 1px black;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 @media (max-width: 1200px) {
   #main main #img-div #img-caption {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     margin-top: 0.2em;
   }
 }
 
 @media (max-width: 850px) {
   #main main #img-div #img-caption {
-    font-size: 0.6rem;
+    font-size: 0.67rem;
   }
 }
 
 @media (max-width: 600px) {
   #main main #img-div #img-caption {
-    font-size: 0.45rem;
+    font-size: 0.60rem;
   }
 }
 
@@ -224,9 +254,21 @@ html {
 }
 
 #main main #tribute-info p.quote {
-  width: 80%;
+  width: 50%;
   margin: 4em auto;
   text-shadow: 0px 0px 100px white;
+}
+
+@media (max-width: 1200px) {
+  #main main #tribute-info p.quote {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  #main main #tribute-info p.quote {
+    width: 70%;
+  }
 }
 
 #main footer {
@@ -241,6 +283,19 @@ html {
   letter-spacing: 2px;
 }
 
+@media (max-width: 850px) {
+  #main footer p {
+    font-size: 0.9rem;
+  }
+}
+
+#main footer p .tooltiptext {
+  display: inline-block;
+  background: url("http://emmafansite.com");
+  top: -420px;
+  left: -600px;
+}
+
 #main footer p a {
   color: #fff;
   -webkit-transition: opacity 200ms ease-in-out;
@@ -249,5 +304,17 @@ html {
 
 #main footer a:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 690px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 13px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

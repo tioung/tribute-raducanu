@@ -23,17 +23,17 @@ html{
         visibility: hidden;
         text-indent: 0;
         width: 260px;
-        background-color: #333;
-        background-color: rgb(195,146,72);
         background-color: rgb(195,146,72);
         color: #fff;
         padding: 1em;
         border-radius: 6px;
-        //opacity: 0.9;
+        box-shadow: $box-shadow;
         position: absolute;
         top: 20px;
         left: -100px;
         z-index: 1;
+        transform: translateY(-100px);
+        transition: transform 100ms ease-in-out;
 
         img{
             display: block;
@@ -52,6 +52,7 @@ html{
 
     &:hover .tooltiptext {
     visibility: visible;
+    transform: translateY(0);
   }
 
 }

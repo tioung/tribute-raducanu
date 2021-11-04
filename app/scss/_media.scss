@@ -15,3 +15,16 @@
 //         }
 //     }
 // }
+@media (max-width:690px){
+    html{
+        //padding: 80px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:500px){
+    html{
+        //padding: 120px;
+        font-size: 13px;
+    }
+}
