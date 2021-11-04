@@ -167,6 +167,7 @@ html {
 }
 
 #main main #img-div {
+  position: relative;
   color: #f1f1f1;
   padding-bottom: 0.6em;
   border-radius: 50%;
